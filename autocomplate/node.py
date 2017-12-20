@@ -5,10 +5,10 @@ def fileparse(filename):
     fd = open(filename)
 
     root = Node()
-    line = fd.readline().strip('\r\n')  # Remove newline characters \r\n
+    line = fd.readline().strip('\r\n')
 
     while line != '':
-        root.add_item(line) #build the trie tree
+        root.add_item(line) 
         line = fd.readline().strip('\r\n')
 
     return root
